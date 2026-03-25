@@ -1,3 +1,7 @@
+//con tro la mot bien dung de luu dia chi cu mot bien khac hoac cua 1 vung nho trong bo nho
+// con tro khong luu gia tri truc tiep ma luu vi tri (dia chi) cua du lieu trong ram, nho do chuong trinh co the truy cap hoac thay doi du lieu thong qua dia chi do
+// cu phap khai bao:
+// <tencontro>;
 #include <iostream>
 using namespace std;
 int main() {
@@ -13,5 +17,12 @@ int main() {
 	//output: 0000008FE2AFF844
 	cout << *p << endl;
 	//output: 20
+	//con tro voi mang
+	int a[3] = {2,3,5};
+	int* p = a;
+	for (int i = 0;i < 3;i++) {
+		cout << *(p + i) << " ";
+	}
 	return 0;
+	//output: 2 3 5
 }
