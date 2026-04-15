@@ -523,36 +523,63 @@ git push origin main --tags
 
 ## Cách nộp bài qua GitHub
 
-### Bước 1 — Tạo repo
-
-```
-1. Vào github.com → New repository
-2. Tên repo: DSA_FinalProject_[TenDeTai]
-3. Chọn Public
-4. Không tick README (tự tạo sau)
-5. Create repository
-```
-
-### Bước 2 — Đẩy code lên
+### Bước 1 — Clone repo môn học về máy
 
 ```bash
-cd /duong/dan/toi/project
-git init
-git remote add origin https://github.com/username/DSA_FinalProject_TenDeTai.git
-git add .
-git commit -m "feat: initial commit - [ten de tai]"
-git branch -M main
-git push -u origin main
+git clone https://github.com/CocAgent/DSALab-HIT.git
+cd DSALab-HIT
 ```
 
-### Bước 3 — Nộp link
+### Bước 2 — Tạo thư mục bài nộp
 
-Nộp đúng 2 thứ:
+Tạo đúng theo cấu trúc sau trong thư mục `Labs_sv/`:
 
 ```
-1. Link GitHub: https://github.com/username/DSA_FinalProject_TenDeTai
-2. File PDF báo cáo: Họ tên + MSSV + Đề tài + Mô tả ngắn (1 trang)
+Labs_sv/
+└── MSSV_HoTen_DeTai/        ← đặt tên theo mẫu này
+    ├── src/
+    │   ├── main.cpp
+    │   ├── structures.h
+    │   └── functions.cpp
+    ├── tests/
+    │   └── test_cases.cpp
+    ├── docs/
+    │   └── bao_cao.pdf       ← tuỳ chọn
+    └── README.md
 ```
+
+Ví dụ: `Labs_sv/21IT001_NguyenVanA_ThuVien/`
+
+### Bước 3 — Đẩy bài lên
+
+```bash
+# Tạo thư mục đúng tên
+mkdir -p Labs_sv/MSSV_HoTen_DeTai/src
+mkdir -p Labs_sv/MSSV_HoTen_DeTai/tests
+
+# Copy toàn bộ code vào thư mục vừa tạo, sau đó:
+git add Labs_sv/MSSV_HoTen_DeTai/
+git commit -m "submit: MSSV_HoTen - [Ten De Tai]"
+git push origin main
+```
+
+### Bước 4 — Kiểm tra bài đã lên chưa
+
+Vào link sau để xác nhận thư mục đã xuất hiện:
+
+```
+https://github.com/CocAgent/DSALab-HIT/tree/main/Labs_sv
+```
+
+### Nộp đúng 2 thứ
+
+```
+1. Thư mục trên GitHub: Labs_sv/MSSV_HoTen_DeTai/
+2. Gửi link thư mục cho giảng viên qua email hoặc LMS
+   Ví dụ: https://github.com/CocAgent/DSALab-HIT/tree/main/Labs_sv/21IT001_NguyenVanA_ThuVien
+```
+
+> **Lưu ý:** Nếu chưa có quyền push, tạo **Pull Request** từ fork của bạn về repo chính.
 
 ### Convention commit message (bắt buộc)
 
