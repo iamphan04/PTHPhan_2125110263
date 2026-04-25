@@ -94,11 +94,7 @@ g++ src/functions.cpp tests/test_cases.cpp -o test
 
 ---
 
-## 📸 Demo (tuỳ chọn)
 
-*(Thêm ảnh chạy chương trình vào đây nếu cần)*
-
----
 
 ## 👤 Thông tin sinh viên
 
